@@ -1,1 +1,6 @@
- https://schoolweb-by-areeb.netlify.app (github account)
+https://areebs-portfolio.netlify.app/ (github account)
+
+to upload:
+git add .
+git commit -m "Message"
+git push
