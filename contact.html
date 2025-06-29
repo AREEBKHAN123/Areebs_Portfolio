@@ -76,7 +76,7 @@
   </header>
 
     
-<div class="bg-gray-700 p-4 min-h-screen">
+<div class="bg-gray-850 p-4 min-h-screen">
   <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
     <div class="md:w-2/3 lg:w-1/2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-gray-100">
@@ -116,27 +116,32 @@
 </form>
 
 <script>
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch("https://formbold.com/s/9gJvR", {
+    const data = Object.fromEntries(formData.entries()); // Convert to JSON
+
+    fetch("/.netlify/functions/submitContact", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     })
-    .then((res) => {
-      if (res.ok) {
-        window.location.href = "thankyou.html";  // ✅ Redirect on success
-      } else {
-        alert("Form submission failed.");
-      }
-    })
-    .catch((err) => {
-      console.error("Error:", err);
-      alert("Something went wrong!");
-    });
+      .then((res) => {
+        if (res.ok) {
+          window.location.href = "thankyou.html";
+        } else {
+          alert("Form submission failed.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+        alert("Something went wrong!");
+      });
   });
 </script>
 

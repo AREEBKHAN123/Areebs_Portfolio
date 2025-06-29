@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
   <style>
     /* Hover underline effect for nav links */
     nav a {
@@ -60,7 +62,7 @@
         <a href="projects.html" class="hover:text-white transition duration-300">Projects</a>
         <a href="resources.html" class="hover:text-white transition duration-300">Resources</a>
       </nav>
-
+      
     <button onclick="location.href='contact.html'" 
   class="inline-flex items-center bg-gray-800 text-gray-300 border-0 py-1 px-3 rounded text-base mt-4 md:mt-0
          hover:bg-indigo-600 hover:text-white hover:scale-105 hover:shadow-lg 
@@ -86,14 +88,16 @@
       <!-- Intro Text -->
       <div class="lg:flex-grow md:w-1/2 md:pl-12 flex flex-col md:items-start md:text-left items-center text-center">
         <h1 class="title-font sm:text-5xl text-4xl mb-4 font-extrabold text-white">Hi, I'm Areeb Khan</h1>
-        <h2 class="text-2xl font-semibold text-indigo-400 mb-4">Aspiring AI/ML & Cybersecurity Enthusiast</h2>
+        <h2 class="text-2xl font-semibold text-indigo-400 mb-4">
+  <span id="typed-text"></span>
+</h2>
         <p class="mb-6 leading-relaxed text-gray-400 max-w-xl">
           Passionate about creating modern web applications and exploring the intersection of Artificial Intelligence, Machine Learning, and Cybersecurity. Currently building real-world projects using the MERN stack / Flask for Backend.
         </p>
         <ul class="text-left text-gray-400 mb-6 text-sm sm:text-base">
-          <li class="mb-2">⚡ Currently Learning: Flask, MERN, Python for AI/ML and Cybersecurity.</li>
+          <li class="mb-2">⚡ Currently Learning: Flask, MERN, Python for AI and Cybersecurity.</li>
           <li class="mb-2">📦 Projects: Webpages, Python Courses and Websites</li>
-          <li class="mb-2">🌐 Goal: Become a Ai/ML Engineer with strong expertise in Cybersecurity and Full-Stack Development</li>
+          <li class="mb-2">🌐 Goal: Become A ML Engineer with strong expertise in Cybersecurity and Full-Stack Development</li>
         </ul>
         <div class="flex flex-wrap gap-4 justify-center md:justify-start">
           <a href="projects.html" class="ui-btn"><span>View Projects</span></a>
@@ -110,7 +114,27 @@
         Made by <a href="contact.html" class="underline">Areeb Khan</a>
       </p>
     </div>
+    
   </footer>
 
 </body>
+<script>
+  new Typed("#typed-text", {
+    strings: ["Aspiring AI/ML Developer", "Cybersecurity Learner", "Full Stack Enthusiast"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
 </html>

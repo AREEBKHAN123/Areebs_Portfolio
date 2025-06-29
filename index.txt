@@ -1,7 +1,0 @@
-https://areebs-portfolio.netlify.app/ (github account)
-https://app.netlify.com/projects/areebs-portfolio/deploys
-
-to upload:
-git add .
-git commit -m "Message"
-git push
