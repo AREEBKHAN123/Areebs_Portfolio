@@ -9,6 +9,6 @@
 
 [[redirects]]
   from = "/.netlify/functions/submitContact"
-  to = "/404.html"
+  to = "/index.html"
   status = 404
   conditions = { Role = ["guest"] }
