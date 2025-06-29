@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Areeb's Portfolio</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Areeb's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hover underline effect for nav links */
+    nav a {
+      position: relative;
+    }
 
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-     <header class="text-gray-400 bg-gray-900 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-     <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="45" fill="black" />
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="35" fill="white" font-family="Arial, sans-serif">
-    &lt;/&gt;
-  </text>
-</svg>
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
 
+    nav a:hover::after {
+      width: 100%;
+    }
 
+    footer a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: underline;
+    }
 
-      <span class="ml-3 text-xl">Areeb's Portfolio</span>
-    </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm md:text-base justify-center gap-3 md:gap-6">
-  <a href="index.html" class="hover:text-white transition duration-300">Home</a>
-  <a href="about_me.html" class="hover:text-white transition duration-300">About Me</a>
-  <a href="projects.html" class="hover:text-white transition duration-300">Projects</a>
-  <a href="resources.html" class="hover:text-white transition duration-300">Resources</a>
-</nav>
+    footer a:hover {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
 
-   <button onclick="location.href='contact.html'" class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+<body class="bg-gray-900 text-gray-300">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-gray-400 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="black" />
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="35" fill="white" font-family="Arial, sans-serif">
+            &lt;/&gt;
+          </text>
+        </svg>
+        <span class="ml-3 text-xl">Areeb's Portfolio</span>
+      </a>
+
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm md:text-base justify-center gap-3 md:gap-6">
+        <a href="index.html" class="hover:text-white transition duration-300">Home</a>
+        <a href="about_me.html" class="hover:text-white transition duration-300">About Me</a>
+        <a href="projects.html" class="hover:text-white transition duration-300">Projects</a>
+        <a href="resources.html" class="hover:text-white transition duration-300">Resources</a>
+      </nav>
+
+    <button onclick="location.href='contact.html'" 
+  class="inline-flex items-center bg-gray-800 text-gray-300 border-0 py-1 px-3 rounded text-base mt-4 md:mt-0
+         hover:bg-indigo-600 hover:text-white hover:scale-105 hover:shadow-lg 
+         transform transition duration-300 ease-in-out">
   Contact
-  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+       stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
     <path d="M5 12h14M12 5l7 7-7 7"></path>
   </svg>
 </button>
 
-  </div>
-</header><div class="bg-gray-700 p-4 min-h-screen">
+    </div>
+  </header>
+
+<div class="bg-gray-700 p-4 min-h-screen">
   <div class="max-w-7xl mx-auto h-max px-6 md:px-12 xl:px-6">
     <div class="md:w-2/3 lg:w-1/2">
 
