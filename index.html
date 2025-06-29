@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Areeb's Portfolio</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-     <header class="text-gray-400 bg-gray-900 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-     <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="45" fill="black" />
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="35" fill="white" font-family="Arial, sans-serif">
-    &lt;/&gt;
-  </text>
-</svg>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Areeb's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hover underline effect for nav links */
+    nav a {
+      position: relative;
+    }
 
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease-in-out;
+    }
 
+    nav a:hover::after {
+      width: 100%;
+    }
 
-      <span class="ml-3 text-xl">Areeb's Portfolio</span>
-    </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm md:text-base justify-center gap-3 md:gap-6">
-  <a href="index.html" class="hover:text-white transition duration-300">Home</a>
-  <a href="about_me.html" class="hover:text-white transition duration-300">About Me</a>
-  <a href="projects.html" class="hover:text-white transition duration-300">Projects</a>
-  <a href="resources.html" class="hover:text-white transition duration-300">Resources</a>
-</nav>
+    footer a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: underline;
+    }
 
-    <button onclick="location.href='contact.html'" class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-  Contact
-  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-    <path d="M5 12h14M12 5l7 7-7 7"></path>
-  </svg>
-</button>
+    footer a:hover {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
 
-  </div>
-</header>
-<section class="text-gray-300 bg-gray-900 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    
-    <!-- 🖼️ Image Section -->
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-      <img class="object-cover object-center rounded-full border-4 border-indigo-700 shadow-xl mx-auto w-48 h-48 md:w-72 md:h-72" alt="profile"
-        src="https://avatars.githubusercontent.com/u/9919?s=200&v=4">
+<body class="bg-gray-900 text-gray-300">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-gray-400 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" fill="black" />
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="35" fill="white" font-family="Arial, sans-serif">
+            &lt;/&gt;
+          </text>
+        </svg>
+        <span class="ml-3 text-xl">Areeb's Portfolio</span>
+      </a>
+
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-sm md:text-base justify-center gap-3 md:gap-6">
+        <a href="index.html" class="hover:text-white transition duration-300">Home</a>
+        <a href="about_me.html" class="hover:text-white transition duration-300">About Me</a>
+        <a href="projects.html" class="hover:text-white transition duration-300">Projects</a>
+        <a href="resources.html" class="hover:text-white transition duration-300">Resources</a>
+      </nav>
+
+      <button onclick="location.href='contact.html'" class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+        Contact
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
     </div>
+  </header>
 
-    <!-- 🧾 Text Section -->
-    <div class="lg:flex-grow md:w-1/2 md:pl-12 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 class="title-font sm:text-5xl text-4xl mb-4 font-extrabold text-white">Hi, I'm Areeb Khan</h1>
-      <h2 class="text-2xl font-semibold text-indigo-400 mb-4">Aspiring AI/ML & Cybersecurity Enthusiast</h2>
-      <p class="mb-6 leading-relaxed text-gray-400 max-w-xl">
-      Passionate about creating modern web applications and exploring the intersection of Artificial Intelligence, Machine Learning, and Cybersecurity. Currently building real-world projects using the MERN stack / Flask for Backend.
+  <!-- Hero Section -->
+  <section class="text-gray-300 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <!-- Avatar -->
+      <img class="object-cover object-center rounded-full border-4 border-indigo-700 shadow-xl mx-auto w-48 h-48 md:w-72 md:h-72"
+        src="images/avatar.webp"
+        alt="Areeb Avatar">
+
+      <!-- Intro Text -->
+      <div class="lg:flex-grow md:w-1/2 md:pl-12 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 class="title-font sm:text-5xl text-4xl mb-4 font-extrabold text-white">Hi, I'm Areeb Khan</h1>
+        <h2 class="text-2xl font-semibold text-indigo-400 mb-4">Aspiring AI/ML & Cybersecurity Enthusiast</h2>
+        <p class="mb-6 leading-relaxed text-gray-400 max-w-xl">
+          Passionate about creating modern web applications and exploring the intersection of Artificial Intelligence, Machine Learning, and Cybersecurity. Currently building real-world projects using the MERN stack / Flask for Backend.
+        </p>
+        <ul class="text-left text-gray-400 mb-6 text-sm sm:text-base">
+          <li class="mb-2">⚡ Currently Learning: Flask, MERN, Python for AI/ML and Cybersecurity.</li>
+          <li class="mb-2">📦 Projects: Webpages, Python Courses and Websites</li>
+          <li class="mb-2">🌐 Goal: Become a Ai/ML Engineer with strong expertise in Cybersecurity and Full-Stack Development</li>
+        </ul>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a href="projects.html" class="ui-btn"><span>View Projects</span></a>
+          <a href="contact.html" class="ui-btn"><span>Contact Me</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6">
+    <div class="container mx-auto text-center">
+      <p class="text-white text-sm opacity-60">
+        Made by <a href="contact.html" class="underline">Areeb Khan</a>
       </p>
-      <ul class="text-left text-gray-400 mb-6 text-sm sm:text-base">
-        <li class="mb-2">⚡ Currently Learning: Flask, MERN, Python for AI/ML and Cybersecurity.</li>
-        <li class="mb-2">📦 Projects: Webpages, Python Courses and Websites</li>
-        <li class="mb-2">🌐 Goal: Become a Ai/ML Engineer with strong expertise in Cybersecurity and Full-Stack Development</li>
-      </ul>
-      <div class="flex justify-center md:justify-start">
-        <!-- From Uiverse.io by devanshsatwara --> 
-
-</button>
-        <a href="projects.html" class="ui-btn"><span>
-    View Projects
-  </span></a>
-        <a href="contact.html" class="ui-btn"><span>Contact Me</span></a>
-      
     </div>
-    </div>
-  </div>
-</section>
+  </footer>
 
-
-  
-
-    </body>
+</body>
 </html>
