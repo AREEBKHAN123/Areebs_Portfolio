@@ -11,4 +11,4 @@
   from = "/.netlify/functions/submitContact"
   to = "/index.html"
   status = 404
-  conditions = { Role = ["guest"] }
+  
