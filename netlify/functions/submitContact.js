@@ -6,7 +6,7 @@ exports.handler = async (event) => {
     const formData = JSON.parse(event.body);
 
     // Send it to FormBold (secure)
-    const response = await fetch("https://formbold.com/s/9gJvR", {
+    const response = await fetch("Enter form API", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
