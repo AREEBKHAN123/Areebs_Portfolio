@@ -13,6 +13,7 @@ exports.handler = async (event) => {
         "Content-Type": "application/json"
       }
     });
+    
 
     if (!response.ok) {
       return {
