@@ -8,7 +8,7 @@
   status = 200
 
 [[redirects]]
-  from = "/.netlify/functions/submitContact"
+  from = "/netlify/functions/submitContact"
   to = "/index.html"
   status = 404
   
